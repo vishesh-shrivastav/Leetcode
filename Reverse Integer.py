@@ -5,10 +5,15 @@ class Solution:
         :type x: int
         :rtype: int
         """
+        
         if x > 0:
             int_as_str = str(x)
         else:
             int_as_str = str(x)[1:]
+        """
+        Or use abs(x) for above
+        """
+        
         rev = 0
         for i in range(len(int_as_str)):
             poww = len(int_as_str) - 1 - i
