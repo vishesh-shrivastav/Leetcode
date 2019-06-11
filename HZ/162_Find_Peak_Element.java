@@ -1,3 +1,4 @@
+//Iterative Binary Search
 class Solution {
     public int findPeakElement(int[] nums) {
         return search(nums, 0, nums.length - 1);
