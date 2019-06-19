@@ -8,7 +8,7 @@ class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = cur = ListNode(0)
         while l1 and l2:
-            if l1.val < l2.val:
+            if l1.val <= l2.val:
                 cur.next = l1
                 l1 = l1.next
             else:
