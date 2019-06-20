@@ -19,7 +19,8 @@ class Solution:
         
         for interval in intervals:
             if interval[0] <= new_interval[1]:
-                new_interval[1] = max(new_interval[1], interval[1])
+                #new_interval[1] = max(new_interval[1], interval[1])
+                res[-1][1] = max(new_interval[1], interval[1])
             else:
                 new_interval = interval
                 res.append(new_interval)
