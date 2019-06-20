@@ -6,7 +6,7 @@ class Solution:
         Then, we take the first interval and compare its end with the next intervals starts. 
         As long as they overlap, we update the end to be the max end of the overlapping intervals. 
         Once we find a non overlapping interval, we can add the previous "extended" interval and start over.
-        Sorting takes O(n log(n)) and merging the intervals takes O(n). So, the resulting algorithm takes O(n log(n)).
+        Sorting takes O(n log(n)) and merging the intervals takes O(n). So, the resulting algorithm takes O(nlog(n)).
         """
         
         if len(intervals) <= 1:
