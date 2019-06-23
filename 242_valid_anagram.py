@@ -18,3 +18,21 @@ class Solution:
             t_dict[letter] = t_dict.get(letter, 0) + 1
         
         return (s_dict == t_dict)
+
+# Method 3
+# CTCI
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        
+        char_counts = [0] * 26
+        
+        for ch in s:
+            char_counts[ord(ch) - ord('a')] += 1
+        for ch in t:
+            char_counts[ord(ch) - ord('a')] -= 1
+            if char_counts[ord(ch) - ord('a')] < 0:
+                return False
+        
+        return True
