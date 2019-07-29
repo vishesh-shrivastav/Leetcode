@@ -6,10 +6,12 @@ class Solution:
         :rtype: int
         """
         # Kadane's Algorithm
-        max_ending_here = max_so_far = nums[0]
-        for x in nums[1:]:
-            max_ending_here = max(x, max_ending_here + x)
-            max_so_far = max(max_so_far, max_ending_here)
+        max_curr = max_global = nums[0]
         
-        return max_so_far
+        for x in nums[1:]:
+            max_curr = max(x, max_curr + x)
+            if max_curr > max_global:
+                max_global = max_curr
+            
+        return max_global
         
